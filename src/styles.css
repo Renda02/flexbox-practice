@@ -21,6 +21,10 @@ h2 {
   font-size: 1.5rem;
 }
 
+p{
+  margin-top:0;
+}
+
 /*Layout*/
 
 .container {
@@ -30,15 +34,45 @@ h2 {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .columns {
   display: flex;
   margin: 2em 0;
-  justify-content: center;
+  justify-content:space-between;
 }
 
-.col {
-  margin: 0 2em;
+
+
+.columns .col {
+  padding-right: 1.5em;
+}
+
+.col_1{
+  width:25%;
+}
+
+.col_2{
+  width: 50%;
+}
+
+.col_3{
+  width:75%;
+}
+
+.col_ls {
+  background: #312614;
+  color: #fff;
+  padding:1em;
+}
+
+
+@media (max-width:600px){
+  .columns{
+    flex-direction: column;
+  }
+  .col_1, .col_2, .col_3{
+    width: 100%;
+  }
 }
